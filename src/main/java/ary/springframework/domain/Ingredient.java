@@ -1,7 +1,9 @@
-package ary.springframework.recipeapp.domain;
+package ary.springframework.domain;
 
-import javax.persistence.*;
-import java.math.BigDecimal;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Ingredient {
@@ -9,15 +11,15 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description;
+ /*   private String description;
     private BigDecimal amount;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure uom;
 
     @ManyToOne
     private Recipe recipe;
-
+*/
     public Long getId() {
         return id;
     }
@@ -25,7 +27,7 @@ public class Ingredient {
     public void setId(Long id) {
         this.id = id;
     }
-
+/*
     public UnitOfMeasure getUom() {
         return uom;
     }
@@ -56,5 +58,5 @@ public class Ingredient {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
-    }
+    }*/
 }

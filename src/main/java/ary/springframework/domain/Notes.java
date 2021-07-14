@@ -1,4 +1,4 @@
-package ary.springframework.recipeapp.domain;
+package ary.springframework.domain;
 
 import javax.persistence.*;
 
